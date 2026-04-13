@@ -6,11 +6,15 @@
         <link rel="icon" type="image/x-icon" href="assets/homerdance.gif">
         <title>My Website</title>
     </head>
-<body class="" id="body">
+<body class="theme-jade" id="body">
     <script src="script.js" defer></script>
 
-    <h1 id="title"><span>Sagan's Website</span></h1>
-
+    <h1 id="title" class=""><span>Welcome.</span></h1>
+    <div class="searchsection">
+        <input type="search" id="searchbar">
+        <button id="searchbutton">Search</button>
+    </div>
+    
     <nav>
         <ul>
             <li><a href="index.html" class="nav-links">Home</a></li>
@@ -21,11 +25,12 @@
         
     </nav>
 
-    <p>My name is Sagan and this is my website.</p> <br> <br>
+    <p>This is my website.</p> <br> <br>
     <div class="buttons">
         <button onclick="changeColor()" id="changeColor">Change color</button>
         <button onclick="changeTheme()" id="changeTheme">Change Theme</button>
         <button onclick="defaultTheme()" id="defaultColor">Default</button>
+        <button onclick="rainbow()" id="rainbow">Rainbow</button>
     </div> <br> <br>
     <script>
         window.onload = function() {
