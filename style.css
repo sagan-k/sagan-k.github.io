@@ -1,4 +1,109 @@
+:root {
+    --bg-color: rgb(245, 244, 242);
+    --title-color: rgb(146, 146, 211);
+    --title-bg-color: rgb(234, 230, 247);
+    --text-color: rgb(100, 91, 153);
+    --link-bg-color: rgb(234, 230, 247);
+    --link-border-color: rgb(146, 146, 211);
+    --link-color: rgb(139, 129, 197);
+
+}
+
+.theme-jade {
+    --bg-color: #e6e6e6;
+    --title-color: #404e3b;
+    --title-bg-color: #bac8b1;
+    --text-color: #404e3b;
+    --link-bg-color: #bac8b1;
+    --link-border-color: #7b9669;
+    --link-color: #404e3b;
+}
+
+.theme-purple {
+    --bg-color: rgb(245, 244, 242);
+    --title-color: rgb(146, 146, 211);
+    --title-bg-color: rgb(234, 230, 247);
+    --text-color: rgb(100, 91, 153);
+    --link-bg-color: rgb(234, 230, 247);
+    --link-border-color: rgb(146, 146, 211);
+    --link-color: rgb(139, 129, 197);
+
+}
+
+
 h1 {
-    color: rgb(198, 135, 240);
+    color: var(--title-color);
     font-family: Comic Sans MS, Comic Sans;
+    background-color: var(--title-bg-color);
+    padding: 10px;
+    border-radius: 25px;
+
+    margin: auto;
+    text-align: center;
+    
+}
+h1 span {
+    display: inline-block;
+    transition: scale 0.3s ease;
+}
+h1:hover span {
+    scale: 1.1;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+nav ul li {
+    margin: 0;
+}
+a {
+    display: inline-block;
+    color: var(--link-color);
+    font-family: Comic Sans MS, Comic Sans;
+    text-decoration: none;
+    padding: 10px 10px;
+    border: 2px solid var(--link-border-color);
+    border-radius: 12px;
+    background-color: var(--link-bg-color);
+    transition: scale 0.3s ease;
+}
+a:hover {
+    scale:1.1;
+    background-color: var(--link-bg-color);
+}
+body {
+    background-color: var(--bg-color);
+}
+
+
+p1 {
+    color: var(--text-color);
+    font-family: Comic Sans MS, Comic Sans;
+    text-align: center;
+}
+
+
+div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+#changeColor:hover, #changeTheme:hover {
+    scale: 1.1;
+}
+#changeColor, #changeTheme {
+    display:inline-block;
+    color: var(--link-color);
+    font-family: Comic Sans MS, Comic Sans;
+    padding: 5px 5px;
+    border: 2px solid var(--link-border-color);
+    border-radius: 12px;
+    background-color: var(--link-bg-color);
+    transition: scale 0.3s ease;
 }
