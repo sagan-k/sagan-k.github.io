@@ -81,10 +81,11 @@ body {
 }
 
 
-p1 {
+p {
     color: var(--text-color);
     font-family: Comic Sans MS, Comic Sans;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
 }
 
 
@@ -94,10 +95,10 @@ div {
     gap: 10px;
     margin-top: 20px;
 }
-#changeColor:hover, #changeTheme:hover {
+#changeColor:hover, #changeTheme:hover, #defaultColor:hover {
     scale: 1.1;
 }
-#changeColor, #changeTheme {
+#changeColor, #changeTheme, #defaultColor {
     display:inline-block;
     color: var(--link-color);
     font-family: Comic Sans MS, Comic Sans;

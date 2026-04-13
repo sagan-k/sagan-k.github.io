@@ -6,8 +6,8 @@
         <link rel="icon" type="image/x-icon" href="assets/homerdance.gif">
         <title>My Website</title>
     </head>
-<body class="theme-jade">
-    <script src="script.js"></script>
+<body class="" id="body">
+    <script src="script.js" defer></script>
 
     <h1 id="title"><span>Sagan's Website</span></h1>
 
@@ -21,11 +21,20 @@
         
     </nav>
 
-    <p1>My name is Sagan and this is my website.</p1> <br> <br>
+    <p>My name is Sagan and this is my website.</p> <br> <br>
     <div class="buttons">
         <button onclick="changeColor()" id="changeColor">Change color</button>
         <button onclick="changeTheme()" id="changeTheme">Change Theme</button>
-    </div>
+        <button onclick="defaultTheme()" id="defaultColor">Default</button>
+    </div> <br> <br>
+    <script>
+        window.onload = function() {
+            if (document.getElementById("body").className === "") {
+                document.getElementById("themeDeclare").innerHTML = "Theme: Default";
+            }
+        }
+    </script>
+    <p id="themeDeclare">Theme: </p>
 
 </body>
 </html>

@@ -6,11 +6,19 @@ function changeColor() {
 
 let themeNum = 0;
 function changeTheme() {
-    const themes = ["theme-purple","theme-jade"];
+    const themes = ["", "theme-purple","theme-jade"];
     themeNum += 1;
     if (themeNum >= themes.length) {
         themeNum = 0;
     };
     document.body.className = themes[themeNum];
-    console.log(document.body.className);
+    document.getElementById("themeDeclare").innerHTML = "Theme: " + themes[themeNum];
+}
+
+
+function defaultTheme() {
+    document.body.className = "";
+    document.getElementById("title").style.color="";
+    document.getElementById("themeDeclare").innerHTML = "Theme:" + " Default";
+    
 }
