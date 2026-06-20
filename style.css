@@ -1,0 +1,98 @@
+
+.pixelify-sans-font1 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+  .google-sans-code-font2 {
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "MONO" 1;
+  }
+
+
+header {
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: rgb(255, 238, 255);
+    border-bottom: 2px purple;
+    border-bottom-style: dashed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    height: 32px;
+  }
+
+#main-link {
+    font-size: x-large;
+    color: rgb(138, 100, 138);
+    text-decoration: none;
+    display: block;
+    justify-content: right;
+}
+#main-link:hover {
+    color: rgb(68, 31, 68);
+    transition:color 0.2s
+}
+
+.header-links{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.header-links a{
+    text-decoration: none;
+    color:rgb(138, 100, 138);
+    font-size: large;
+}
+
+.header-links a:hover {
+    color:rgb(68, 31, 68);
+    transition:color 0.2s
+}
+
+.content {
+    display: grid;
+    padding-top: 40px;
+    padding-right: 120px;
+    padding-left: 40px;
+    gap: 20px;
+  }
+
+
+.bio-title {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 40px;
+    color: rgb(145, 100, 137);
+    margin-bottom: 0px;
+}
+
+
+
+.bio-subtitle {
+    font-family: "Google Sans Code", sans-serif;
+    margin-top: 0px;
+    color: rgb(155, 112, 147);
+    margin-bottom: 10px
+}
+
+.bio-content {
+    font-family: "Google Sans Code", sans-serif;
+    margin-top: 0px;
+    color:  rgb(66, 42, 62);
+    margin-bottom: 0px
+}
+
+
