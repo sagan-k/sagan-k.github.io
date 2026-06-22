@@ -14,6 +14,7 @@
     --body-text-color: rgb(117, 114, 111);
     --bg-color-1: rgb(235, 232, 225);
     --bg-color-2: rgb(230, 228, 218);
+    --bg-color-3: rgb(196, 192, 183);
 
 }
 
@@ -55,6 +56,10 @@ header {
     color: var(--selected-link-color);
 }
 
+body {
+    background-color: var(--bg-color-3);
+}
+
 .header-links{
     display: flex;
     gap: 10px;
@@ -77,6 +82,7 @@ header {
 
 
 .bio {
+    background-color: var(--bg-color-1);
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas: "bio photo";
@@ -89,6 +95,8 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 100%;
+    padding: 20px;
+    height: 700px;
 }
 
 
