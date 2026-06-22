@@ -6,7 +6,16 @@
     font-style: normal;
   }
 
+:root {
+    --main-text-color: rgb(93, 91, 88);
+    --secondary-text-color: rgb(105, 100, 89);
+    --unselected-link-color: rgb(113, 113, 113);
+    --selected-link-color: rgb(176, 167, 147);
+    --body-text-color: rgb(117, 114, 111);
+    --bg-color-1: rgb(235, 232, 225);
+    --bg-color-2: rgb(230, 228, 218);
 
+}
 
   .google-sans-code-font2 {
     font-family: "Google Sans Code", monospace;
@@ -20,31 +29,30 @@
 
 header {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: rgb(255, 238, 255);
-    border-bottom: 2px purple;
-    border-bottom-style: dashed;
+    background-color: var(--bg-color-2);
+    border: 2px var(--unselected-link-color);
+    border-style: dashed;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
+    top: 4px;
+    left: 4px;
+    right: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 15px;
+    padding: 5px 10px;;
     height: 32px;
   }
 
 #main-link {
-    font-size: x-large;
-    color: rgb(138, 100, 138);
+    font-size: 25px;
+    color: var(--main-text-color);
     text-decoration: none;
     display: block;
     justify-content: right;
+    transition: color 0.3s ease-in-out;
 }
 #main-link:hover {
-    color: rgb(68, 31, 68);
-    transition:color 0.2s
+    color: var(--selected-link-color);
 }
 
 .header-links{
@@ -54,45 +62,77 @@ header {
 }
 .header-links a{
     text-decoration: none;
-    color:rgb(138, 100, 138);
-    font-size: large;
+    color: var(--unselected-link-color);
+    font-size: 22px;
+    transition: color 0.3s ease-in-out;
 }
 
 .header-links a:hover {
-    color:rgb(68, 31, 68);
-    transition:color 0.2s
+    color: var(--selected-link-color);
 }
 
-.content {
+.header-links a.active {
+    color: var(--main-text-color);
+}
+
+
+.bio {
     display: grid;
-    padding-top: 40px;
-    padding-right: 120px;
-    padding-left: 40px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "bio photo";
+    align-items: start;
+    margin-top: 60px;
+    margin-right: 150px;
+    margin-left: 150px;
     gap: 20px;
-  }
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%;
+}
 
 
 .bio-title {
     font-family: "Pixelify Sans", sans-serif;
     font-size: 40px;
-    color: rgb(145, 100, 137);
+    color: var(--main-text-color);
+    margin-bottom: 0px;
+}
+
+.bio-content {
+    grid-area: bio;
+    
+}
+
+.bio-text {
+    font-family: "Google Sans Code", sans-serif;
+    margin-top: 0px;
+    color: var(--body-text-color);
     margin-bottom: 0px;
 }
 
 
+.biophoto {
+    grid-area: photo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: calc(2*128px);
+    height: calc(2*128px);
+
+}
+.profile-photo {
+    height: auto;
+    display: flex;
+    scale: 0.3;
+}
 
 .bio-subtitle {
     font-family: "Google Sans Code", sans-serif;
     margin-top: 0px;
-    color: rgb(155, 112, 147);
+    color: var(--secondary-text-color);
     margin-bottom: 10px
-}
-
-.bio-content {
-    font-family: "Google Sans Code", sans-serif;
-    margin-top: 0px;
-    color:  rgb(66, 42, 62);
-    margin-bottom: 0px
 }
 
 
