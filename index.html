@@ -43,11 +43,21 @@
                     </p>
                 </div>
                 <div class="biophoto">
-                    <img src="assets/iron-throne-profile.png" alt="Profile Photo" class="profile-photo">
+                    <img src="assets/iron-throne-profile.png" alt="Profile Photo" class="profile-photo" onclick="openWinterDialog()">
                 </div>
             </div>
            
             
         </div>
+
+        <dialog id="winter-dialog-container" class="winter-dialog">
+
+            <button id="close-winter-dialog" onclick="closeWinterDialog()">✖</button>
+            
+            <div class="winter-dialog-text">
+                <h2 id="winter-dialog-title">Winter Is Coming.</h2>
+                <p id="winter-dialog-days">In *blank* days</p>
+            </div>
+        </dialog>
     </body>
 </html>

@@ -13,7 +13,7 @@
     --selected-link-color: rgb(176, 167, 147);
     --body-text-color: rgb(117, 114, 111);
     --bg-color-1: rgb(235, 232, 225);
-    --bg-color-2: rgb(230, 228, 218);
+    --bg-color-2: rgb(232, 229, 220);
     --bg-color-3: rgb(196, 192, 183);
 
 }
@@ -27,6 +27,15 @@
       "MONO" 1;
   }
 
+
+
+  @font-face {
+    font-family: "Game of Thrones";
+    src: url("assets/fonts/game-of-thrones/Game_of_Thrones.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
 header {
     font-family: "Pixelify Sans", sans-serif;
@@ -55,6 +64,7 @@ header {
 #main-link:hover {
     color: var(--selected-link-color);
 }
+
 
 body {
     background-color: var(--bg-color-3);
@@ -134,6 +144,7 @@ body {
     height: auto;
     display: flex;
     scale: 0.3;
+    cursor: pointer;
 }
 
 .bio-subtitle {
@@ -144,3 +155,96 @@ body {
 }
 
 
+
+
+@keyframes WinterDialogFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes WinterDialogFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.winter-dialog {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    opacity: 0;
+}
+
+.winter-dialog[open] {
+    animation: WinterDialogFadeIn 4s ease-in-out forwards;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.winter-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.winter-dialog[open]::backdrop {
+    animation: WinterDialogFadeIn 1.5s ease-in-out forwards;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+#close-winter-dialog {
+    position: fixed;
+    left: 10px;
+    top: 50px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: rgb(255,255,255,0.8);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+#close-winter-dialog:hover {
+    color: var(--selected-link-color);
+}
+
+
+.winter-dialog-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    color: rgb(255,255,255,1);
+}
+#winter-dialog-title {
+    font-family: "Game of Thrones", sans-serif;
+    font-size: 60px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+#winter-dialog-days {
+    font-family: "Google Sans Code", sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
